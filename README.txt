@@ -9,7 +9,7 @@ only been tested on windows and >>> ASSUMES LITTLE ENDIANNESS. <<<
 You'll need SDL.lib in OMF format, grab it at /lib/x86/SDL.lib. 32-bit only at 
 this time. If you want to convert your own for any reason, see below.
 
-to use SDL binding in your project:
+to use the SDL binding in your project:
 dmd <your source files> SDl.d -c
 link <your object files> SDL.obj SDL.lib
 
@@ -18,7 +18,7 @@ executed, add /subsystem:windows to the link command line:
 
 link <your object files> SDL.obj SDL.lib /subsystem:windows
 
-the 32-bit VC++ .lib file was converted to OMF format using comf2omf
+the 32-bit VC++ .lib that ships with SDL was converted to OMF format using comf2omf
 that comes with the free version of the Borland compiler. You can find it on 
 the Embarcadero website or easier yet, search archive.org; you'll want 
 version 5.5. Digital Mars has their own but I've never used it. 
