@@ -10,7 +10,7 @@ You'll need SDL.lib in OMF format, grab it at /lib/x86/SDL.lib. 32-bit only at
 this time. If you want to convert your own for any reason, see below.
 
 to use SDL binding in your project:
-dmd <your source files> SDL.d -c
+dmd <your source files> SDl.d -c
 link <your object files> SDL.obj SDL.lib
 
 to avoid the command prompt window appearing when the resulting binary is 
