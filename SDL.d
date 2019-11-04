@@ -80,7 +80,8 @@ extern(C) void SDL_QuitSubSystem(Uint32 flags);
 extern(C) void SDL_Quit();
 extern(C) Uint32 SDL_WasInit(Uint32 flags);
 extern(C) char *SDL_GetError();
-
+extern(C) void SDL_SetError(const char *fmt, ...);
+extern(C) void SDL_ClearError();
 //---------------------------------------------------------------------
 // Chap 6. VIDEO
 //--------------------------------------------------------------------
@@ -560,13 +561,15 @@ enum Uint8 SDL_MAJOR_VERSION = 1;
 enum Uint8 SDL_MINOR_VERSION = 2;
 enum Uint8 SDL_PATCHLEVEL    = 15;
 
-void SDL_VERSION(ref SDL_version x)
+void SDL_VERSION(SDL_version *x)
 {
 	pragma(inline, true);
 	x.major = SDL_MAJOR_VERSION;
 	x.minor = SDL_MINOR_VERSION;				
 	x.patch = SDL_PATCHLEVEL;
 }
+
+extern(C) const(SDL_version) *SDL_Linked_Version();
 
 /*#define SDL_QuitRequested() \
         (SDL_PumpEvents(), SDL_PeepEvents(NULL,0,SDL_PEEKEVENT,SDL_QUITMASK))*/
