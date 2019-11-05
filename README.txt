@@ -1,7 +1,7 @@
 SDL 1.2.15 for D
 Created by: Seth Ballantyne  <seth.ballantyne@gmail.com>
 
-This was created for my own use and I've made in publically available
+This is D binding to SDL that I've created for my own use. I've made in publically available
 on the off-chance someone else might find it useful. Currently everything
 in the SDL documenation has been included, and ONLY that so if it's
 not in the docs, it aint here.. yet. I'll add to it over time. This has
@@ -9,7 +9,7 @@ only been tested on windows and >>> ASSUMES LITTLE ENDIANNESS. <<<
 You'll need SDL.lib in OMF format, grab it at /lib/x86/SDL.lib. 32-bit only at 
 this time. If you want to convert your own for any reason, see below.
 
-to use SDL binding in your project:
+to use the SDL binding in your project:
 dmd <your source files> SDL.d -c
 link <your object files> SDL.obj SDL.lib
 
