@@ -1,7 +1,7 @@
 SDL 1.2.15 for D
 Created by: Seth Ballantyne  <seth.ballantyne@gmail.com>
 
-This is D binding to SDL that I've created for my own use. I've made in publically available
+This is a D binding to SDL that I've created for my own use. I've made in publically available
 on the off-chance someone else might find it useful. Currently everything
 in the SDL documenation has been included, and ONLY that so if it's
 not in the docs, it aint here.. yet. I'll add to it over time. This has
